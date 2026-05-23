@@ -2,9 +2,6 @@
 
 A modern Retrieval-Augmented Generation (RAG) chatbot powered by LangChain, FastAPI, and Streamlit. Upload documents, chat with your data, and get AI-powered answers—all in a user-friendly web app.
 
-**Live Preview:**  
-👉 [https://langchain-rag-chatbot-frontend.onrender.com/](https://langchain-rag-chatbot-frontend.onrender.com/)
-
 ---
 
 ## 🚀 Features
