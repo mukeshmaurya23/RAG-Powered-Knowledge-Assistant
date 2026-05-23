@@ -1,4 +1,4 @@
-# LangChain-RAG-Chatbot
+# NEXUS-RAG-Chatbot
 
 A modern Retrieval-Augmented Generation (RAG) chatbot powered by LangChain, FastAPI, and Streamlit. Upload documents, chat with your data, and get AI-powered answers—all in a user-friendly web app.
 
