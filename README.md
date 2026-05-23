@@ -41,8 +41,8 @@ A modern Retrieval-Augmented Generation (RAG) chatbot powered by LangChain, Fast
 
 
 ```bash
-git clone https://github.com/MohammedMusharraf11/LangChain-RAG-Chatbot.git
-cd LangChain-RAG-Chatbot
+git clone https://github.com/mukeshmaurya23/RAG-Powered-Knowledge-Assistant
+cd RAG-Powered-Knowledge-Assistant
 ```
 
 
