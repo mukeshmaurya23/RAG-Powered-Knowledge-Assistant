@@ -1,0 +1,66 @@
+LangChain-RAG-Chatbot - Run Commands
+
+Project root:
+/Users/mukesh/Desktop/projects/LangChain-RAG-Chatbot
+
+==================================================
+ONE-TIME SETUP (first time only)
+==================================================
+Terminal 1
+Where: /Users/mukesh/Desktop/projects/LangChain-RAG-Chatbot
+Commands:
+brew install python@3.11
+chmod +x scripts/bootstrap.sh
+./scripts/bootstrap.sh
+
+If Python 3.11 is already installed, just run:
+chmod +x scripts/bootstrap.sh
+./scripts/bootstrap.sh
+
+==================================================
+START APP (every time)
+==================================================
+Open 2 terminals.
+
+Terminal A (Backend API)
+Where: /Users/mukesh/Desktop/projects/LangChain-RAG-Chatbot/api
+Commands:
+source ../.venv/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+Terminal B (Frontend Streamlit)
+Where: /Users/mukesh/Desktop/projects/LangChain-RAG-Chatbot/app
+Commands:
+source ../.venv/bin/activate
+streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0 --server.maxUploadSize=1024 --server.maxMessageSize=1024 --server.enableCORS=false --server.enableXsrfProtection=false
+
+Optional (if your backend is not local):
+API_BASE_URL="http://localhost:8000" streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0 --server.maxUploadSize=1024 --server.maxMessageSize=1024 --server.enableCORS=false --server.enableXsrfProtection=false
+
+==================================================
+OPEN IN BROWSER
+==================================================
+Frontend UI:
+http://localhost:8501
+
+Backend API docs:
+http://localhost:8000/docs
+
+==================================================
+STOP APP
+==================================================
+In each terminal, press:
+Ctrl + C
+
+==================================================
+QUICK TROUBLESHOOTING
+==================================================
+If command not found or wrong Python is used:
+Where: /Users/mukesh/Desktop/projects/LangChain-RAG-Chatbot
+Commands:
+./scripts/bootstrap.sh
+
+If venv is not active, activate it again in each service terminal:
+source ../.venv/bin/activate
+
+After code changes, restart both backend and frontend terminals.
